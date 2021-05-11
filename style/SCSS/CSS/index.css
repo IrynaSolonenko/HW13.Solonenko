@@ -1,0 +1,310 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.bg-color {
+  background: #f6f2f2;
+}
+
+main .main-FProd .photo ul, main .main-FProd .list ul, main .main-FProd .bottom-line, main .main-FProd .info-main-FProd, main .first-main, header div ul {
+  display: flex;
+  align-items: center;
+}
+
+header div ul {
+  left: -50%;
+  transform: translateX(50%);
+}
+
+header {
+  background: #f6f2f2;
+}
+header div {
+  background: black;
+}
+header div ul {
+  margin: 0;
+  padding: 0;
+}
+header div li {
+  padding: 45px 24px;
+  list-style: none;
+}
+header div li:hover {
+  background: red;
+}
+header div a {
+  text-decoration: none;
+  color: white;
+  margin: 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+main .first-main {
+  margin: 100px 0 110px;
+}
+main .first-main .info, main .first-main .video {
+  width: 50%;
+}
+main .first-main h1 {
+  font-size: 60px;
+  font-weight: Extra-bold;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 35px;
+}
+main .first-main p {
+  font-size: 16px;
+  font-weight: Regular;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 50px 60px 0;
+  line-height: 2;
+}
+main .first-main a {
+  font-size: 18px;
+  font-weight: Bold;
+  font-family: "Open Sans", sans-serif;
+  background: red;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid red;
+  text-decoration: none;
+  padding: 16px 50px;
+}
+main .first-main a:hover {
+  background: white;
+  color: red;
+  border-radius: 6px;
+  border: 1px solid red;
+}
+main .video {
+  display: flex;
+  justify-content: flex-end;
+}
+main .ifraim-video {
+  position: relative;
+  height: 355px;
+  width: 550px;
+  background: #c4c0b1;
+  box-shadow: 0px 1px 20px 12px #00001f1f;
+}
+main .ifraim-video img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+main .main-wrapper {
+  display: flex;
+  align-items: baseline;
+  padding: 110px 0 110px;
+  border-bottom: 1px solid #cecccc;
+}
+main .main-wrapper .left-part {
+  width: 50%;
+  padding: 0 110px 0 18px;
+}
+main .main-wrapper .left-part h2 {
+  font-size: 42px;
+  text-transform: uppercase;
+}
+main .main-wrapper .left-part a {
+  font-size: 18px;
+  font-weight: Bold;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: red;
+  border-radius: 6px;
+  border: 1px solid red;
+  text-decoration: none;
+  padding: 16px 50px;
+}
+main .main-wrapper .left-part a:hover {
+  background: red;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid red;
+}
+main .main-wrapper .left-part p {
+  font-size: 16px;
+  font-weight: Regular;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 50px 60px 0;
+  line-height: 2;
+}
+main .main-wrapper .right-part {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .main-wrapper .right-part .info {
+  width: 50%;
+  padding: 0 25px 25px 0;
+}
+main .main-wrapper .right-part .info p {
+  font-size: 16px;
+  font-weight: Regular;
+  font-family: "Open Sans", sans-serif;
+  line-height: 2;
+}
+main .main-wrapper .right-part .info h3 {
+  font-size: 24px;
+  padding: 25px 0;
+}
+main .main-FProd {
+  margin-top: 110px;
+}
+main .main-FProd .info-main-FProd {
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+main .main-FProd h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: Bold;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 35px;
+}
+main .main-FProd p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: Regular;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 32px;
+  width: 50%;
+}
+main .main-FProd .bottom-line {
+  border-bottom: 2px solid red;
+  width: 130px;
+  justify-content: center;
+  text-align: center;
+}
+main .main-FProd .list ul {
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 90px;
+}
+main .main-FProd .list ul li {
+  list-style: none;
+}
+main .main-FProd .list ul a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #555555;
+}
+main .main-FProd .list ul a:hover {
+  color: red;
+}
+main .main-FProd .list li:not(:last-child) {
+  padding-right: 50px;
+}
+main .main-FProd .photo {
+  margin-top: 65px;
+}
+main .main-FProd .photo ul {
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+}
+main .main-FProd .photo ul li {
+  width: 290px;
+  height: 295px;
+  background: #f5f0dd;
+  list-style: none;
+}
+main .main-FProd .photo ul li:not(:nth-child(4n)) {
+  margin: 0 20px 20px 0;
+}
+main .main-FProd .photo ul li:nth-child(4n) {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

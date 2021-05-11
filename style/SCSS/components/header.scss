@@ -1,0 +1,31 @@
+header{
+    background: #f6f2f2;
+    div{
+    background: black;
+    
+        ul{
+            @extend %flex-box;
+            @extend %transform-centre;
+            margin: 0;
+            padding: 0;
+        }
+        
+                li{
+                    padding: 45px 24px;
+                    list-style: none;
+                }
+                li:hover{
+                    background: red;
+                }
+                    
+                    a{
+                        text-decoration: none;
+                        color:white;
+                        margin: 25px;
+                        text-transform: uppercase;
+                        @include font(14px, bold);
+            
+                    }
+                
+        }
+    }

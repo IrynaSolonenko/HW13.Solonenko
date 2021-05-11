@@ -1,0 +1,175 @@
+main{    
+        .first-main{
+            margin: 100px 0 110px ;
+            @extend %flex-box; 
+            
+            .info, .video{
+                width: 50%;
+            }
+                    h1{
+                        @include font(60px, Extra-bold);
+                        text-transform: uppercase;
+                        padding-bottom: 35px
+                    }
+                    p{
+                        @include font(16px, Regular);
+                        margin:0 50px 60px 0;
+                        line-height: $line-height;
+
+                    }
+                
+                    a{
+                        @include font(18px, Bold);
+                        @include button(red, white);
+                        text-decoration: none;
+                        padding: 16px 50px;
+                            }
+                    
+                    a:hover {
+                        @include button(white, red);
+                    }
+                }
+                .video{
+                    display: flex;
+                    justify-content: flex-end;
+                    }
+                    .ifraim-video{
+                        position: relative;
+                        height: 355px;
+                        width: 550px;
+                        background: #c4c0b1;
+                        box-shadow: 0px 1px 20px 12px #00001f1f;
+                        
+                        img{
+                            margin: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%; 
+                            margin-right: -50%; 
+                            transform: translate( -50%, -50%);
+                        }
+                    }
+    
+        .main-wrapper {
+        display: flex;
+        align-items: baseline;
+        padding: 110px 0 110px;
+        border-bottom: 1px solid rgb(206, 204, 204);
+            .left-part {
+                    width: 50%;
+                    padding: 0 110px 0 18px;
+                            h2 {
+                                font-size: 42px;
+                                text-transform: uppercase;
+                            }  
+                        a{
+                        @include font(18px, Bold);
+                        @include button(white, red);
+                        text-decoration: none;
+                        padding: 16px 50px;
+                            }
+                    
+                    a:hover {
+                        @include button(red, white);
+                    }
+                    p{
+                        @include font(16px, Regular);
+                        margin:0 50px 60px 0;
+                        line-height: $line-height;
+
+                    }
+                }
+            .right-part{
+                    width: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .info {
+                        width: 50%;  
+                        padding: 0 25px 25px 0;  
+                            p{
+                                @include font(16px, Regular);
+                                line-height: $line-height;
+                            }
+                                
+                                h3 {
+                                    font-size: 24px;
+                                    padding: 25px 0;
+                                }
+                        }       
+                }
+        }
+
+        .main-FProd{
+            margin-top: 110px;
+            .info-main-FProd{
+                @extend %flex-box; 
+                    justify-content: center;
+                    flex-direction: column;
+                    max-width: 100%;
+            }
+                h2{
+                    text-transform: uppercase;
+                    @include font(42px, Bold);
+                    padding-bottom: 35px;
+                }
+                p{
+                    text-align: center;
+                    @include font(16px, Regular);
+                    padding-bottom: 32px;
+                    width: 50%;
+                }
+                .bottom-line{
+                    border-bottom: 2px solid red;
+                    width: 130px;
+                    @extend %flex-box; 
+                    justify-content: center;
+                    text-align: center;
+                
+                
+            }
+            .list{
+                ul{
+                    @extend %flex-box; 
+                    justify-content: center;
+                    max-width: 100%;
+                    margin-top: 90px;
+                   
+                    li{
+                        list-style: none;
+                    }
+                        a{
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: #555555;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                }
+                    li:not(:last-child){
+                        padding-right: 50px;
+                    }
+            }
+            .photo{
+                margin-top: 65px;
+                ul{
+                @extend %flex-box; 
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 0;
+                li{
+                    width: 290px;
+                    height: 295px;
+                    background: #f5f0dd;
+                    list-style: none;
+                }
+                li:not(:nth-child(4n)){
+                    margin: 0 20px 20px 0;
+                }
+                li:nth-child(4n){
+                    margin-bottom: 20px;
+                }
+                }
+            }
+        }
+}
