@@ -1,7 +1,8 @@
 header{
-    background: #f6f2f2;
+    background: $main-color;
+    padding-top: 29px;
     div{
-    background: black;
+    background: #313030;
     
         ul{
             @extend %flex-box;
