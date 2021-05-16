@@ -1,24 +1,7 @@
-$main-color: #f6f2f2;
-$icon-bg-color: #f5f0dd;
-$font-fam: 'Open Sans', sans-serif;
-$line-height: 2;
-$font-color-p:#828282;
-$font-color-h: #393939;
-
 .container{
     max-width: 1250px;
     margin: 0 auto;
     display: flex;
 }
-.bg-color{
-    background: $main-color;
-}
 
-%flex-box{
-    display: flex;
-    align-items: center;
-}
-%transform-centre{
-    left: -50%;
-    transform: translateX(50%);
-}
+

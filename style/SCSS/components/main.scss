@@ -1,6 +1,10 @@
 main{    
+    .about-us-main{
+        background: $main-color;
+        padding-top: $block-margin;
+        padding-bottom: $block-margin;
+
         .first-main{
-            margin: 100px 0 110px ;
             @extend %flex-box; 
             
             .info, .video{
@@ -30,8 +34,7 @@ main{
                     }
                 }
                 .video{
-                    display: flex;
-                    justify-content: flex-end;
+                    @include flex(flex-end, flex-start);
                     }
                     .ifraim-video{
                         position: relative;
@@ -49,12 +52,14 @@ main{
                             transform: translate( -50%, -50%);
                         }
                     }
+                }
     
         .main-wrapper {
-        display: flex;
-        align-items: baseline;
-        padding: 110px 0 110px;
-        border-bottom: 1px solid rgb(206, 204, 204);
+            @include flex(flex-start, baseline);
+            margin-top: $block-margin;
+            .container{
+                padding-bottom: $block-margin;
+            border-bottom: 1px solid rgb(206, 204, 204);
 
             .left-part {
                     width: 50%;
@@ -83,11 +88,9 @@ main{
                     }
                 }
             .right-part{
+                @include flex(space-between, flex-start);
                     width: 50%;
-                    display: flex;
-                     align-items:flex-start;
                     flex-wrap: wrap;
-                    justify-content: space-between;
                     .info {
                         width: 50%;  
                         padding: 0;
@@ -111,13 +114,14 @@ main{
                             padding-bottom: 50px;
                         }     
                 }
+            }
         }
-
+        .FP{
+            margin-top: $block-margin;
+        
         .main-FProd{
-            margin-top: 110px;
             .info-main-FProd{
-                @extend %flex-box; 
-                    justify-content: center;
+                @include flex(center, center);
                     flex-direction: column;
                     max-width: 100%;
             }
@@ -135,23 +139,19 @@ main{
                     color: $font-color-p;
                 }
                 .bottom-line{
-                    border-bottom: 2px solid red;
-                    width: 130px;
-                    @extend %flex-box; 
-                    justify-content: center;
+                    @extend %border-line;
+                    @include flex(center, center);
                     text-align: center;
-                
-                
             }
             .list{
                 ul{
-                    @extend %flex-box; 
-                    justify-content: center;
+                    @include flex(center, center);
                     max-width: 100%;
                     margin-top: 90px;
                    
                     li{
                         list-style: none;
+                        
                     }
                         a{
                             text-decoration: none;
@@ -168,17 +168,22 @@ main{
             }
             .photo{
                 margin-top: 65px;
+                
                 ul{
-                @extend %flex-box; 
+                 @include flex(space-between, center);
                 flex-wrap: wrap;
-                justify-content: space-between;
                 margin: 0 15px;
                 padding: 0;
+               
+                
+                
                     li{
+                       
                         width: 290px;
                         height: 295px;
                         background: $icon-bg-color;
                         list-style: none;
+        
                     }
                     li:not(:nth-child(4n)){
                         margin: 0 20px 20px 0;
@@ -189,4 +194,250 @@ main{
                 }
             }
         }
+    }
+    .meet-main{
+        margin-top: $block-margin;
+        .meet-info{
+        
+            h2{
+               @include  font(42px, 700);
+               color: $font-color-h;
+               text-transform: uppercase;
+               margin-bottom: 40px;
+            }
+            p{
+                @include  font(16px, 400); 
+                color: $font-color-p;
+                max-width: 60%;
+                margin-bottom: 33px;
+            }
+            .bottom-line{
+                @extend %border-line;
+                margin: 0;
+            }
+        }
+        .meet-photos{
+            margin-top: 70px;
+            @include flex(flex-start, flex-end);
+            .big-photo{
+                width: 314px;
+                height: 461px;
+                background: $icon-bg-color;
+                float: left;
+                margin-right: 74px;
+                
+            }
+            .right-part{
+                .right-info{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    max-width: 100%;
+                    h3{
+                        @include font(32px, 600); 
+                        color: $font-color-h;
+                        text-transform: uppercase;
+                        margin-bottom: 35px;
+                    }
+                    p{
+                        @include font(16px, 400); 
+                        color: $font-color-p;
+                        margin-bottom: 46px;
+                    }
+                    .social{
+                        @extend %flex-box;
+                        li:not(:last-child){
+                            padding-right: 30px;
+                        }
+                        li{
+                            a{
+                                text-decoration: none;
+                                @include font(18px, 400);
+                                font-style: italic;
+                                color: $font-color-h;
+                            }
+                        }
+                    }
+                    
+                    .small-photos{
+                        margin-top: 65px;
+                        ul{
+                        display: flex;
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            width: 198px;
+                            height: 214px;
+                            background: $icon-bg-color;
+                            list-style: none;
+                            margin-right: 20px;
+                            position: relative;
+                            .name{
+                                visibility: hidden;
+                                @include flex(center, flex-start);
+                                position: absolute;
+                                bottom: 0;
+                                background: #7a786e;
+                                @include font(18px, 600);
+                                text-transform: uppercase;
+                                color: white;
+                                width: 100%;
+                                padding: 10px 0 14px;
+
+                            }
+                        }
+                        li:hover .name{
+                            visibility: visible;
+                        }
+                    }
+                    }
+                }
+         
+            }
+            
+        }
+    }
+    .subscribe-main-part{
+        margin-top: $block-margin;
+        background: $main-color;
+        width: 100%;
+        @include flex(center, center);
+            flex-direction: column;
+        .subscribe-info{
+            padding: 140px 0 140px;
+            h3{
+                @include font(42px, 700);
+                color: white;
+                width: 100%;
+                @include flex(center, flex-start);
+                margin-bottom: 40px;
+            }
+            p{
+                @include font(16px, 400);
+                color: white;
+                width: 100%;
+                @include flex(center, flex-start);
+            }
+            .input-form{
+                @include flex(center, flex-start);
+                margin-top: 65px;
+                input{
+                    width: 521px;
+                    border: none;
+                    border-radius: 5px;
+                    margin-right: 22px;
+                    padding: 34px 0 34px 37px;
+                }
+                a{
+                    @include button(red, white);
+                    @include font(18px, 700);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 29px 55px;
+                }
+                a:hover{
+                    @include button(white, red);
+                }
+            }
+        }
+    }
+    .contact-us-page{
+        margin-top: $block-margin;
+        .contact-us-info{
+            
+            .info{
+                max-width: 730px;
+                
+                h2{
+                @include font(42px, 700);
+                color: $font-color-h;
+                text-transform: uppercase;
+                padding-bottom: 50px;
+                }
+                p{
+                    @include font(16px, 400);
+                    color: $font-color-p;
+                }
+                .line{
+                    @extend %border-line;
+                    margin-top: 54px;
+                }
+            }
+            .bottom-part{
+                @include flex(space-between, flex-start);
+                margin-top: 54px;
+            
+                .left-part{
+                    max-width: 730px;
+                    margin-right: 98px;
+        
+                .info-form{
+                    display: flex;
+                    input, textarea{
+                        background: #e5e5e5;
+                        color: $font-color-p;
+                        border: none;
+                        border-radius: 8px;
+                    }
+                    .input{
+                        @include flex(space-between, flex-start);
+                    p{
+                        width: 45%;
+                        input{
+                            margin-bottom: 45px;
+                            padding: 25px 0 25px 50px;
+                            width: 100%;
+                        }
+                    }
+                    }
+                        textarea{
+                            padding: 33px 0 0 50px;
+                            width: 730px;
+                            height: 249px;
+                            margin-bottom: 45px;
+                        }        
+                    a{
+                        @include button(red, white);
+                        @include font(18px, 700);
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        padding: 27px 295px;
+                            
+                    }
+                    a:hover{
+                        @include button(white, red);
+                    }
+                    
+                }
+            }
+                .right-part{
+                    padding: 125px 0 125px;
+                    width: 100%;
+                    background: #2d2d2d;
+                    .info-contacts{
+                        padding-left: 88px;
+                        line-height: 3;
+                        h3{
+                            color: #bababa;
+                            @include font(18px, 700);
+                            }
+                            p{
+                                a{
+                                    color: #bababa;
+                                    text-decoration: none;
+                                    @include font(16px, 400)
+            
+                                }
+                            }
+                    }
+                    
+                
+                    
+                }
+                
+            }
+        }
+        
+    }
+    
 }

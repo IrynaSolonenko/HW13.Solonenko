@@ -1,0 +1,12 @@
+%flex-box{
+    display: flex;
+    align-items: center;
+}
+%transform-centre{
+    left: -50%;
+    transform: translateX(50%);
+}
+%border-line{
+    border-bottom: 3px solid red;
+    width: 130px; 
+}
