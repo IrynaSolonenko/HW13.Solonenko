@@ -397,6 +397,7 @@ main .meet-main .meet-photos .right-part .right-info p {
   font-family: "Open Sans", sans-serif;
   color: #828282;
   margin-bottom: 46px;
+  max-width: 70%;
 }
 main .meet-main .meet-photos .right-part .right-info .social li:not(:last-child) {
   padding-right: 30px;

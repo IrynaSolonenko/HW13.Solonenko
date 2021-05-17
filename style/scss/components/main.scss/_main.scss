@@ -242,6 +242,7 @@ main{
                         @include font(16px, 400); 
                         color: $font-color-p;
                         margin-bottom: 46px;
+                        max-width: 70%;
                     }
                     .social{
                         @extend %flex-box;
