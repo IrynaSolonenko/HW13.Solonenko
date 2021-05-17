@@ -84,14 +84,9 @@ select {
   display: flex;
 }
 
-main .meet-main .meet-photos .right-part .right-info .social, main .about-us-main .first-main, header .container ul {
+main .meet-main .meet-photos .right-part .right-info .social, main .about-us-main .first-main, header .container nav ul {
   display: flex;
   align-items: center;
-}
-
-header .container ul {
-  left: -50%;
-  transform: translateX(50%);
 }
 
 main .contact-us-page .contact-us-info .info .line, main .meet-main .meet-info .bottom-line, main .FP .main-FProd .bottom-line {
@@ -106,18 +101,21 @@ header {
 header .container {
   background: #313030;
 }
-header .container ul {
+header .container nav {
+  margin: 0 auto;
+}
+header .container nav ul {
   margin: 0;
   padding: 0;
 }
-header .container li {
+header .container nav li {
   padding: 45px 24px;
   list-style: none;
 }
-header .container li:hover {
+header .container nav li:hover {
   background: red;
 }
-header .container a {
+header .container nav a {
   text-decoration: none;
   color: white;
   margin: 25px;
@@ -327,10 +325,9 @@ main .FP .main-FProd .photo {
 }
 main .FP .main-FProd .photo ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
-  margin: 0 15px;
   padding: 0;
 }
 main .FP .main-FProd .photo ul li {
@@ -340,10 +337,10 @@ main .FP .main-FProd .photo ul li {
   list-style: none;
 }
 main .FP .main-FProd .photo ul li:not(:nth-child(4n)) {
-  margin: 0 20px 20px 0;
+  margin: 0 27px 27px 0;
 }
 main .FP .main-FProd .photo ul li:nth-child(4n) {
-  margin-bottom: 20px;
+  margin-bottom: 27px;
 }
 main .meet-main {
   margin-top: 110px;
@@ -483,15 +480,18 @@ main .subscribe-main-part .subscribe-info p {
 main .subscribe-main-part .subscribe-info .input-form {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   margin-top: 65px;
 }
 main .subscribe-main-part .subscribe-info .input-form input {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
   width: 521px;
   border: none;
   border-radius: 5px;
   margin-right: 22px;
-  padding: 34px 0 34px 37px;
+  padding: 30px 0 30px 37px;
 }
 main .subscribe-main-part .subscribe-info .input-form a {
   background: red;
@@ -562,9 +562,9 @@ main .contact-us-page .contact-us-info .bottom-part .left-part .info-form .input
 }
 main .contact-us-page .contact-us-info .bottom-part .left-part .info-form .input p {
   width: 45%;
+  margin-bottom: 45px;
 }
 main .contact-us-page .contact-us-info .bottom-part .left-part .info-form .input p input {
-  margin-bottom: 45px;
   padding: 25px 0 25px 50px;
   width: 100%;
 }

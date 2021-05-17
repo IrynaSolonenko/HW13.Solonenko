@@ -3,10 +3,11 @@ header{
     padding-top: 29px;
     .container{
     background: #313030;
+    nav{
+        margin: 0 auto;
     
         ul{
             @extend %flex-box;
-            @extend %transform-centre;
             margin: 0;
             padding: 0;
         }
@@ -29,4 +30,5 @@ header{
                     }
                 
         }
+    }
     }

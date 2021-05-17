@@ -170,9 +170,8 @@ main{
                 margin-top: 65px;
                 
                 ul{
-                 @include flex(space-between, center);
+                 @include flex(space-around, flex-start);
                 flex-wrap: wrap;
-                margin: 0 15px;
                 padding: 0;
                
                 
@@ -186,10 +185,10 @@ main{
         
                     }
                     li:not(:nth-child(4n)){
-                        margin: 0 20px 20px 0;
+                        margin: 0 27px 27px 0;
                     }
                     li:nth-child(4n){
-                        margin-bottom: 20px;
+                        margin-bottom: 27px;
                     }
                 }
             }
@@ -319,14 +318,15 @@ main{
                 @include flex(center, flex-start);
             }
             .input-form{
-                @include flex(center, flex-start);
+                @include flex(center, stretch);
                 margin-top: 65px;
                 input{
+                    @include font(18px, 400);
                     width: 521px;
                     border: none;
                     border-radius: 5px;
                     margin-right: 22px;
-                    padding: 34px 0 34px 37px;
+                    padding: 30px 0 30px 37px;
                 }
                 a{
                     @include button(red, white);
@@ -383,8 +383,8 @@ main{
                         @include flex(space-between, flex-start);
                     p{
                         width: 45%;
+                        margin-bottom: 45px;
                         input{
-                            margin-bottom: 45px;
                             padding: 25px 0 25px 50px;
                             width: 100%;
                         }
