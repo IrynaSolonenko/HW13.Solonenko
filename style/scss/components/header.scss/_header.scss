@@ -2,24 +2,18 @@ header{
     background: $main-color;
     padding-top: 29px;
     .container{
-    background: #313030;
-    nav{
-        margin: 0 auto;
+        background: #313030;
+        background-size: cover;
+        nav{
+            margin: 0 auto;
     
-        ul{
-            @extend %flex-box;
-            margin: 0;
-            padding: 0;
-        }
-        
+            ul{
+                @extend %flex-box;
+                margin: 0;
+                padding: 0;
                 li{
                     padding: 45px 24px;
                     list-style: none;
-                }
-                li:hover{
-                    background: red;
-                }
-                    
                     a{
                         text-decoration: none;
                         color:white;
@@ -28,7 +22,13 @@ header{
                         @include font(14px, bold);
             
                     }
+                }
+                li:hover{
+                    background: red;
+                }
+                 
+            }
                 
         }
     }
-    }
+}

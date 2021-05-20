@@ -178,7 +178,7 @@ main{
                 
                     li{
                        
-                        width: 290px;
+                       width: 290px;
                         height: 295px;
                         background: $icon-bg-color;
                         list-style: none;
@@ -217,7 +217,7 @@ main{
         }
         .meet-photos{
             margin-top: 70px;
-            @include flex(flex-start, flex-end);
+            @include flex(flex-start, flex-start);
             .big-photo{
                 width: 314px;
                 height: 461px;
@@ -260,9 +260,10 @@ main{
                     }
                     
                     .small-photos{
-                        margin-top: 65px;
+                        margin-top: 35px;
                         ul{
                         display: flex;
+                        flex-wrap: wrap; 
                         margin: 0;
                         padding: 0;
                         li{
@@ -270,7 +271,7 @@ main{
                             height: 214px;
                             background: $icon-bg-color;
                             list-style: none;
-                            margin-right: 20px;
+                            margin: 10px;
                             position: relative;
                             .name{
                                 visibility: hidden;
@@ -413,7 +414,7 @@ main{
             }
                 .right-part{
                     padding: 125px 0 125px;
-                    width: 100%;
+                   width: 100%;
                     background: #2d2d2d;
                     .info-contacts{
                         padding-left: 88px;

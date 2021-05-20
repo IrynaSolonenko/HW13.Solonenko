@@ -1,3 +1,6 @@
+html,body{
+    overflow-x: hidden
+    }
 %flex-box{
     display: flex;
     align-items: center;
@@ -8,5 +11,9 @@
 }
 %border-line{
     border-bottom: 3px solid red;
-    width: 130px; 
+    max-width: 130px; 
+}
+%display-wrap{
+    display: flex;
+    flex-wrap: wrap;
 }
