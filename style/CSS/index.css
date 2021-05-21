@@ -98,8 +98,6 @@ select {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    margin: 0;
-    padding: 0;
   }
 }
 @media (max-width: 1024px) {
@@ -108,8 +106,6 @@ select {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    margin: 0;
-    padding: 0;
   }
 }
 @media (max-width: 979px) {
@@ -118,8 +114,6 @@ select {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    margin: 0;
-    padding: 0;
     justify-content: center;
   }
 }
@@ -187,9 +181,10 @@ header .container nav ul li:hover {
 
 @media (max-width: 1250px) {
   header {
+    max-width: 1024px;
     width: 100%;
     padding: 0;
-    margin-right: 0;
+    margin: 0;
   }
   header .container {
     padding: 0;
@@ -902,7 +897,7 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
     margin-top: 30px;
   }
   main .main-wrapper .container .right-part .info {
-    width: 50%;
+    width: 100%;
   }
 }
 @media (max-width: 979px) {
@@ -913,6 +908,7 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
   main .main-wrapper .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 20px 30px;
   }
   main .main-wrapper .container .left-part {
@@ -930,7 +926,7 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
     margin-top: 30px;
   }
   main .main-wrapper .container .right-part .info {
-    width: 40%;
+    width: 100%;
     padding: 0;
     margin: 0;
   }
@@ -947,6 +943,7 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
   }
   main .main-wrapper .container .left-part {
     width: 100%;
+    padding: 0;
   }
   main .main-wrapper .container .left-part h2 {
     font-size: 30px;
@@ -965,7 +962,7 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
     margin-top: 30px;
   }
   main .main-wrapper .container .right-part .info {
-    width: 55%;
+    width: 100%;
     margin-bottom: 20px;
   }
   main .main-wrapper .container .right-part .info:not(:nth-child(2n)) {
@@ -984,7 +981,7 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
     padding: 20px 10px;
   }
   main .main-wrapper .container .left-part {
-    width: 40%;
+    width: 100%;
   }
   main .main-wrapper .container .left-part h2 {
     font-size: 30px;
@@ -1049,7 +1046,7 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
   main .FP .main-FProd .photo ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 @media (max-width: 767px) {
@@ -1157,6 +1154,15 @@ main .contact-us-page .contact-us-info .bottom-part .right-part .info-contacts p
     max-width: 767px;
     width: 100%;
     margin: 30px 0;
+  }
+  main .meet-main .meet-info, main .meet-main .right-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .meet-main .meet-photos {
+    display: flex;
+    flex-wrap: wrap;
   }
   main .meet-main .meet-photos .right-part .right-info .small-photos {
     margin-top: 35px;
