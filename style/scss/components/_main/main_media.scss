@@ -1,56 +1,28 @@
-@media (max-width: 1250px){
-    main{
-        
-        .about-us-main{
-          
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            .first-main{
-                @include flex(center, flex-start);
-                flex-wrap: wrap;
-                padding: 50px 10px; 
-                width: 80%;
-                .info{
-                    h1{
-                        @include font(40px, 800);
-                    }
-                    p{
-                        margin: 0;
-                        @include font(18px, 400);
-                    }
-                    a{
-                        margin: 40px 0 40px;
-                    }
-                }   
-                .video{
-                    display: block;
-                        .ifraim-video{
-                        margin: 0;
-                        }
-                }
-            }
-        }
-    }
-}
 
 @media (max-width: 1024px){
     main{
         .about-us-main{
-            max-width: 979px;
-        
+            padding: 40px 0;
             .first-main{
-                @include flex(center, flex-start);
-                flex-wrap: wrap;
-                width: 80%;
-                margin: 0 auto;
+                display: flex;
+                flex-direction: column-reverse;
+                text-align: center;
                 .info{
-                    padding-bottom: 20px;
+                    padding-bottom: 10px;
                     width: 100%;
-                    p{
-                        @include font(20px, 400);
+                    h1{
+                        @include font(35px, 800);
                     }
-                    
+                    p{
+                        @include font(16px, 400);
+                        margin-bottom: 30px;
+                    }
+
+                }
+                .video{
+                    width: 100%;
+                    @include flex(center, center);
+                    margin-bottom: 30px;
                 }
             }
         }
@@ -59,15 +31,26 @@
 @media (max-width: 979px){
     main{
         .about-us-main{
-            max-width: 767px;
             .first-main{
                 flex-wrap: wrap;
                 @include flex(center, center);
+                flex-direction: column-reverse;
                 padding: 10px 10px;
-                width: 70%;
                 margin: 0;
+                .info{
+                    p{
+                        margin-bottom: 30px;
+                    }
+                }
                 .video{
-                    width: 50%;
+                    width: 100%;
+                    @include flex(center, center);
+                    margin-bottom: 30px;
+                    .ifraim-video{
+                        height: 355px;
+                        width: 550px;
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -77,15 +60,29 @@
     .about-us-main{
         width: 100%;
         .first-main{
-            max-width: 480px;
             flex-wrap: wrap;
             @include flex(flex-start, flex-start);
+            flex-direction: column-reverse;
             padding: 10px 10px;
-            width: 40%;
+            width: 100%;
+            .info {
+                h1 {
+                    @include font(30px, 800);
+                }
+
+                p {
+                    @include font(16px, 400);
+                    margin: 0;
+                    padding: 0;
+                }
+            }
             .video{
+                width: 100%;
+                margin-bottom: 30px;
                 .ifraim-video{
-                    width: 400px;
-                    height: 350px;
+                    height: 355px;
+                    width: 550px;
+                    margin: 0;
                 }
             }
             
@@ -97,11 +94,11 @@
         .about-us-main{
             width: 100%;
             .first-main{
-                max-width: 320px;
                 @include flex(flex-start, flex-start);
+                flex-direction: column-reverse;
                 flex-wrap: wrap;
                 padding: 10px 5px;
-                width: 40%;
+                width: 100%;
                 .info{
                     h1{
                         @include font(35px, 800);
@@ -111,9 +108,10 @@
                     }
                 }
                 .video{
+                    width: 100%;
                     .ifraim-video{
-                        width: 300px;
-                        height: 250px;
+                        height: 355px;
+                        width: 550px;
                     }
                 }
               
@@ -126,15 +124,13 @@
 @media (max-width: 1024px){
     main{
     .main-wrapper{
-        max-width: 979px;
         margin: 50px 0;
         .container{
-            display: flex;
-            flex-direction: column;
-            padding: 0 50px;
             .left-part{
                 width: 100%;
                 text-align: center;
+                padding: 0;
+                margin-right: 20px;
                 p{
                     margin-bottom: 30px;
                 }
@@ -153,7 +149,6 @@
 @media (max-width: 979px){
     main{
         .main-wrapper{
-            max-width: 767px;
             margin: $container-margin;
             .container{
                 display: flex;
@@ -184,7 +179,6 @@
 @media (max-width: 767px){
     main{
         .main-wrapper{
-            max-width: 480px;
             margin: $container-margin;
             .container{
                 @include flex(center, center);
@@ -201,10 +195,9 @@
                 .right-part{
                     @include flex(center, center);
                     flex-wrap: wrap;
-                    width: 85%;
+                    width: 100%;
                     margin-top: 30px;
                     .info{
-                        width: 100%;
                         margin-bottom: 20px;
                     }
                     .info:not(:nth-child(2n)){
@@ -223,7 +216,6 @@
 @media (max-width: 480px){
     main{
         .main-wrapper{
-            max-width: 320px;
             margin: $container-margin;
             .container{
                 padding: 20px 10px;
@@ -237,7 +229,6 @@
                     }
                 }
                 .right-part{
-                    max-width: 320px;
                     @include flex(center, flex-start);
                     flex-wrap: wrap;
                     width: 100%;
@@ -263,7 +254,6 @@
     main{
         .FP{
             margin: $container-margin;
-            max-width: 979px;
             .container{
                 .main-FProd{
                     
@@ -286,7 +276,6 @@
         .FP{
             margin: $container-margin;
                 .main-FProd{
-                    max-width: 767px;
                     width: 100%;
                     margin: $container-margin;
                     .list{
@@ -355,16 +344,19 @@
             margin: $container-margin;
             .container{
                 .main-FProd{
-                    max-width: 481px;
                     width: 100%;
                     margin: $container-margin;
                     .info-main-FProd{
-                        @include flex(flex-start, flex-start);
+                        @include flex(center, flex-start);
                         h2{
                         @include font(30px, 800);
+                            margin: 0 auto;
                         }
                         p{
-                            width: 70%;
+                            width: 100%;
+                        }
+                        .bottom-line{
+                            margin: 0 auto;
                         }
                         
                     }
@@ -372,6 +364,7 @@
                             ul{
                                 margin: $container-margin;
                                 @include wrap(flex, wrap);
+                                justify-content: center;
                                 li{
                                     padding: 10px;
                                 }
@@ -390,38 +383,39 @@
     }
 }
 /*----------------------------------------------------*/
-@media (max-width: 1250px){
+@media (max-width:1250px){
     main{
         .meet-main{
-            margin: 0 10px;
-            min-width: 1024px;
+            max-width: 1024px;
             width: 100%;
+            margin: $container-margin;
+            .meet-info{
+                width: 100%;
                 .meet-photos{
                     @include flex(center, center);
-                    .meet-info{
-                        .right-part{
+                    flex-wrap: wrap;
+                    .right-part{
+                        .right-info{
+                            width: 100%;
                             .small-photos{
-                                
                                 ul{
-                                 @include wrap(flex, wrap);
-                                justify-content: center;
-                                li{
-                                   margin-bottom: 20px;
-                                }
+                                    width: 100%;
+                                    @include wrap(flex, wrap);
+                                    justify-content: center;
+
                                 }
                             }
                         }
                     }
                 }
-            
+            }
+
         }
     }
 }
-
 @media (max-width:1024px){
     main{
         .meet-main{
-            max-width: 979px;
             width: 100%;
             margin: $container-margin;
                 .meet-photos{
@@ -444,7 +438,6 @@
 @media (max-width:979px){
     main{
         .meet-main{
-            max-width: 767px;
             width: 100%;
             margin: $container-margin;
             .meet-info, .right-info{
@@ -454,13 +447,16 @@
             }
                 .meet-photos{
                     @include wrap(flex, wrap);
+                    justify-content: center;
                         .right-part{
+                            margin: $container-margin;
                             .right-info{
                             .small-photos{
                                 margin-top: 35px;
                                 ul{
                                     width: 100%;
                                     @include wrap(flex, wrap);
+                                    justify-content: center;
                                     
                                 }
                             }
@@ -474,7 +470,6 @@
 @media (max-width:767px){
     main{
         .meet-main{
-            max-width: 480px;
             width: 100%;
             margin: $container-margin;
             .meet-info{
@@ -483,13 +478,20 @@
                 .meet-photos{
                     @include flex(center, center);
                     flex-wrap: wrap;
+                    margin: 0;
                         .right-part{
+                            margin: $container-margin;
                             .right-info{
                                 width: 100%;
+                                .social {
+                                        @include wrap(flex, wrap);
+                                        justify-content: center;
+                                }
                             .small-photos{
                                 ul{
                                     width: 100%;
-                                    @include wrap(flex, wrap); 
+                                    @include wrap(flex, wrap);
+                                    justify-content: center;
                                     
                                 }
                             }
@@ -503,7 +505,6 @@
 @media (max-width:480px){
     main{
         .meet-main{
-            max-width: 320px;
             width: 100%;
             margin: $container-margin;
             .meet-info{
@@ -515,12 +516,21 @@
                     @include flex(center, center);
                     flex-wrap: wrap;
                         .right-part{
+                            margin: $container-margin;
                             .right-info{
                                 width: 100%;
+                                margin-left: 0;
+                                padding: 0;
+                                .social{
+                                        width: 100%;
+                                        @include wrap(flex, wrap);
+                                        justify-content: center;
+                                }
                             .small-photos{
                                 ul{
                                     width: 100%;
-                                    @include wrap(flex, wrap); 
+                                    @include wrap(flex, wrap);
+                                    justify-content: center;
                                     
                                 }
                             }
@@ -543,7 +553,6 @@ main{
         }
         .subscribe-info{
             width: 100%;
-            max-width:767px;
         }
     }
 }
@@ -553,10 +562,7 @@ main{
         .subscribe-main-part{
             margin: $container-margin ;
             .subscribe-info{
-                padding: 0;
-                margin: 0;
                 width: 100%;
-                max-width:481px;
                 .input-form{
                     flex-wrap: wrap;
                    input{
@@ -576,9 +582,7 @@ main{
         .subscribe-main-part{
             .subscribe-info{
                 width: 100%;
-                max-width:320px;
-                padding: 0;
-                margin: 0;
+                padding: 50px 10px;
                 h3{
                     @include font(26px, 800);
                 }
@@ -598,54 +602,43 @@ main{
     }
 }
 /*------------------------------------------*/
-@media (max-width: 1250px){
-    main{
-        .contact-us-page{
-            .contact-us-info{
-                .bottom-part{
-                    max-width: 1024px;
-                    .left-part{
-                        margin: 0;
-                        padding-right: 50px;
-                    }
-                    .right-part{
-                        margin-left: 30px;
-                        padding: 0;
-                        .info-contacts{
-                            padding: 125px 0;
-                        }
-
-                    }
-                }
-            }
-        }
-    }
-}
 @media (max-width: 979px){
     main{
         .contact-us-page{
             margin: $container-margin ;
             .contact-us-info{
+                width: 100%;
+                .info{
+                    width: 100%;
+                }
                 .bottom-part{
-                    @include  flex(flex-start, flex-start);
-                    max-width: 767px;
+                    @include wrap(flex, wrap);
+                    justify-content: space-between;
                     .left-part{
+                        width: 100%;
                         .info-form{
+                            width: 100%;
                             form{
-                                .input, textarea{
+                                textarea{
                                     width: 100%;
                                 }
+
                                 a{
-                                    @include font(16px, 600);
-                                    padding: 13px 170px;
+                                    @include font(16px, 800);
+                                    padding: 13px 0;
+                                    width: 100%;
+                                    text-align: center;
                                 }
                             }
                         }
                     }
                     .right-part{
-                        margin-left: 20px;
-                        .info-contacts{
-                        padding: 125px 0 125px 10px;
+                        width: 100%;
+                        padding: 0;
+                        margin: 20px 0 0;
+                        .info-contacts {
+                            padding: 0 10px;
+
                         }
                     }
                 }
@@ -659,30 +652,37 @@ main{
             margin: $container-margin ;
             .contact-us-info{
                 width: 100%;
-                max-width: 480px;
                 .info{
                     width: 100%;
                    }
                 .bottom-part{
-                    @include wrap(flex, wrap);
+                    //@include wrap(flex, wrap);
                     justify-content: center;
                     .left-part{
+                        width: 100%;
                         .info-form{
                             form{
                                 .input, textarea{
                                     width: 100%;
                                 }
                                 a{
-                                    @include font(16px, 500);
-                                    padding: 13px 120px;
+                                    @include font(16px, 800);
+                                    padding: 13px 0;
+                                    width: 100%;
+                                    text-align: center;
                                 }
                             }
                         }
                     }
                     .right-part{
+                        width: 100%;
                         padding: 0;
-                        margin: 10px 0;
+                        margin: 20px 0 0;
+                        .info-contacts {
+                            padding: 10px;
+                            margin: 0;
 
+                        }
                     }
                 }
             }
@@ -693,30 +693,40 @@ main{
     main{
         .contact-us-page{
             .contact-us-info{
-                width: 100%;
-                max-width: 320px;
-               .info{
-                width: 100%;
-               }
                 .bottom-part{
                     @include wrap(flex, wrap);
                     .left-part{
+                        width: 100%;
                         .info-form{
                             form{
+                                input{
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                                input[type]{
+                                    padding: 5px;
+                                }
                                 .input, textarea{
                                     width: 100%;
                                 }
                                 a{
                                     @include font(16px, 800);
-                                    padding: 16px 120px;
+                                    padding: 16px 0;
+                                    width: 100%;
+                                    text-align: center;
                                 }
                             }
                         }
                     }
                     .right-part{
+                        width: 100%;
                         padding: 0;
-                        margin: 10px 0;
+                        margin: 20px 0 0;
+                        .info-contacts {
+                            padding: 10px;
+                            margin: 0;
 
+                        }
                     }
                 }
             }

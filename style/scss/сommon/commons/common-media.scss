@@ -1,26 +1,10 @@
-@media only screen and (max-width:1240px)
-{
-html {width: 1240px;
-margin: 0 auto;
-}
-}
-@media (max-width: 1250px){
-    .container{
-        max-width: 1024px;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-       
-       
-    }
-}
 @media (max-width: 1024px){
     .container{
         max-width: 979px;
         width: 100%;
         margin: 0 auto;
         display: flex;
-      
+        padding: 0 15px;
     }
 }
 @media (max-width: 979px){
@@ -29,7 +13,7 @@ margin: 0 auto;
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        padding: 0 15px;
     }
 }
 @media (max-width: 767px){
@@ -38,14 +22,14 @@ margin: 0 auto;
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        padding: 0 15px;
     }
 }
 @media (max-width: 480px){
     .container{
-        max-width: 320px;
         width: 100%;
         display: flex;
-        justify-content: center;
+        padding: 0 15px;
+        margin: 0 auto;
     }
 }

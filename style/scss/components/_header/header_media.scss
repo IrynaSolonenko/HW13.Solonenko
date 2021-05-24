@@ -1,25 +1,39 @@
-@media (max-width: 1250px){
-     header{
-          max-width: 1024px;
-          width: 100%;
-          padding: 0;
-          margin: 0;
-          .container{
-               padding: 0;
-          }
-         }
-}
 @media (max-width: 1024px){
      header{
-          max-width: 979px;
           width: 100%;
+          background: #313030;
+          background-size: cover;
+          .container{
+               background: #313030;
+               background-size: cover;
+               justify-content: center;
+               nav{
+                    margin: 0;
+                    padding: 0;
+
+                    ul {
+                         @include flex(space-around, flex-start);
+                         li{
+                              padding: 20px 5px;
+                              a{
+                                   @include font(16px, bold);
+                                   margin: 25px;
+                              }
+                         }
+                    }
+               }
+          }
      }
 }
+
 @media (max-width: 978px){
      header{
-         max-width: 767px;
          width: 100%;
+          background: #313030;
+          background-size: cover;
          .container{
+              background: #313030;
+              background-size: cover;
                nav{
                     margin: 0;
                     padding: 0;
@@ -40,8 +54,9 @@
 }
 @media (max-width: 766px){
      header{
-          max-width: 481px;
           width: 100%;
+          background: #313030;
+          background-size: cover;
           .container{
                nav{
                     margin: 0;
@@ -60,12 +75,11 @@
 }
 @media (max-width: 480px){
      header{
-          max-width: 320px;
+          background: #313030;
+          background-size: cover;
           width: 100%;
-          .container{
+          padding: 0;
                nav{
-                    margin: 0;
-                    padding: 0;
                
                     ul{
                          display: flex;
@@ -81,5 +95,5 @@
                     
                }
           }
-     }
+
 }
